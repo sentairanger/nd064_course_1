@@ -13,6 +13,7 @@ docker logs -f <techtrends-container-id>
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+
 INFO:app:2021-08-18 20:38:09,459: Status request successfull
 INFO:werkzeug:2021-08-18 20:38:09,459: 172.17.0.1 - - [18/Aug/2021 20:38:09] "GET /healthz HTTP/1.1" 200 -
 INFO:werkzeug:2021-08-18 20:38:14,741: 172.17.0.1 - - [18/Aug/2021 20:38:14] "GET / HTTP/1.1" 200 -
