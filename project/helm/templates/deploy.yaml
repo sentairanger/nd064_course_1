@@ -22,23 +22,23 @@ spec:
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        imagePullPolicy: {{.Values.image.pullPolicy}}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
         ports:
-        - containerPort: {{ .Values.ports.containerPort}}
-          protocol: {{.Values.ports.protocol}}
+        - containerPort: {{ .Values.ports.containerPort }}
+          protocol: {{ .Values.ports.protocol }}
         livenessProbe:
            httpGet:
-             path: {{.Values.livenessProbe.path}}
-             port: {{.Values.livenessProbe.port}}
+             path: {{ .Values.livenessProbe.path }}
+             port: {{ .Values.livenessProbe.port }}
         readinessProbe:
            httpGet:
-             path: {{.Values.readinessProbe.path}}
-             port: {{.Values.readinessProbe.port}}
+             path: {{ .Values.readinessProbe.path }}
+             port: {{ .Values.readinessProbe.port }}
         resources:
           requests:
-            memory: {{.Values.resources.requests.memory}}
-            cpu: {{.Values.resources.requests.cpu}}
+            memory: {{ .Values.resources.requests.memory }}
+            cpu: {{ .Values.resources.requests.cpu }}
           limits:
-            memory: {{.Values.resources.limits.memory}}
-            cpu: {{.Values.resources.limits.cpu}}
+            memory: {{ .Values.resources.limits.memory }}
+            cpu: {{ .Values.resources.limits.cpu }}
